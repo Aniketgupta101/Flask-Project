@@ -65,9 +65,6 @@
       <h2>Todo</h2>
       <table class="table">
         <thead>
-          {% for todo in allTodos %}
-            
-          {% endfor %}
           <tr>
             <th scope="col">Sr.no</th>
             <th scope="col">Title</th>
@@ -76,13 +73,14 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          
+          {% for todo in allTodo %}
+            <tr>
+              <th scope="row">1</th>
+              <td>{{todo.title}}</td>
+              <td>{{todo.description}}</td>
+              <td>{{todo.data_created}}</td>
+            </tr>
+          {% endfor %}
         </tbody>
       </table>
     </div>
