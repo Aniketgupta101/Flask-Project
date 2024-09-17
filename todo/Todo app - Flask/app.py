@@ -23,8 +23,8 @@ def hello_world():
     todo = Todo(title = "first todo", description = "start investing in stocks")
     db.session.add(todo)
     db.session.commit()
-    allTodos = Todo.query.all()
-    return render_template('index.html', allTodo = allTodos)
+    allTodo = Todo.query.all()
+    return render_template('index.html', allTodo = allTodo)
    # return 'Hello, World!'
    
 @app.route('/show')
